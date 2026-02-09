@@ -1,6 +1,4 @@
-// ===========================
 // DADOS DO CURSO
-// ===========================
 
 const courseData = {
     title: 'Recebimento de Notas - Selo COMEM CMB',
@@ -490,9 +488,7 @@ const courseData = {
     ]
 };
 
-// ===========================
 // VARIÁVEIS GLOBAIS
-// ===========================
 
 let currentLessonId = 1;
 let currentQuestionIndex = 0;
@@ -500,9 +496,7 @@ let quizAnswers = {};
 let completedLessons = new Set();
 let studentName = 'Aluno';
 
-// ===========================
 // INICIALIZAÇÃO
-// ===========================
 
 document.addEventListener('DOMContentLoaded', () => {
     loadFromLocalStorage();
@@ -512,9 +506,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateProgressBar();
 });
 
-// ===========================
 // FUNÇÕES DE ARMAZENAMENTO
-// ===========================
 
 function saveToLocalStorage() {
     localStorage.setItem('courseProgress', JSON.stringify({
@@ -537,9 +529,7 @@ function loadFromLocalStorage() {
     document.getElementById('userName').textContent = studentName;
 }
 
-// ===========================
 // RENDERIZAÇÃO DE AULAS
-// ===========================
 
 function renderLessonsList() {
     const list = document.getElementById('lessonsList');
@@ -596,9 +586,7 @@ function updateCompletionStatus(lessonId) {
     }
 }
 
-// ===========================
 // FUNÇÕES DE QUIZ
-// ===========================
 
 function renderQuiz() {
     document.getElementById('lessonView').style.display = 'none';
@@ -710,9 +698,7 @@ function showResults(correctCount, percentage, passed, results) {
     }
 }
 
-// ===========================
 // CERTIFICADO
-// ===========================
 
 function downloadCertificate() {
     const canvas = document.createElement('canvas');
@@ -760,9 +746,7 @@ function downloadCertificate() {
     link.click();
 }
 
-// ===========================
 // CONFETTI
-// ===========================
 
 function triggerConfetti() {
     const canvas = document.getElementById('confetti');
@@ -812,9 +796,7 @@ function triggerConfetti() {
     animate();
 }
 
-// ===========================
 // EVENT LISTENERS
-// ===========================
 
 function setupEventListeners() {
     // Navegação de Aulas
@@ -880,9 +862,7 @@ function setupEventListeners() {
     });
 }
 
-// ===========================
 // BARRA DE PROGRESSO
-// ===========================
 
 function updateProgressBar() {
     const total = courseData.lessons.length;
@@ -893,9 +873,7 @@ function updateProgressBar() {
     document.getElementById('progressPercentage').textContent = Math.round(percentage) + '%';
 }
 
-// ===========================
 // REDIMENSIONAMENTO DE JANELA
-// ===========================
 
 window.addEventListener('resize', () => {
     const canvas = document.getElementById('confetti');
