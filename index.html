@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso CMB - Recebimento de Notas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navegação Principal -->
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">Curso CMB</span>
+                </div>
+                <div class="navbar-progress">
+                    <span class="progress-text">Progresso: <strong id="progressPercentage">0%</strong></span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+                <div class="navbar-user">
+                    <span id="userName">Aluno</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Container Principal -->
+        <div class="main-container">
+            <!-- Sidebar de Navegação -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <h3>Aulas</h3>
+                </div>
+                <ul class="lessons-list" id="lessonsList">
+                    <!-- Preenchido por JavaScript -->
+                </ul>
+                <div class="sidebar-footer">
+                    <button class="btn-quiz" id="goToQuizBtn">
+                        <span class="quiz-icon">✓</span>
+                        Ir para Avaliação
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Conteúdo Principal -->
+            <main class="content">
+                <!-- Tela de Aula -->
+                <div id="lessonView" class="lesson-view">
+                    <div class="lesson-header">
+                        <h1 id="lessonTitle">Carregando...</h1>
+                        <p id="lessonSubtitle" class="lesson-subtitle"></p>
+                    </div>
+
+                    <!-- Seção de Vídeo -->
+                    <div class="video-section" id="videoSection">
+                        <div class="video-placeholder">
+                            <div class="video-placeholder-content">
+                                <span class="video-icon">🎬</span>
+                                <p>Espaço reservado para vídeo do YouTube</p>
+                                <small>Clique em "Adicionar Vídeo" para incorporar um vídeo</small>
+                            </div>
+                        </div>
+                        <div id="videoContainer" class="video-container" style="display: none;"></div>
+                    </div>
+
+                    <!-- Conteúdo da Aula -->
+                    <div class="lesson-content" id="lessonContent">
+                        <!-- Preenchido por JavaScript -->
+                    </div>
+
+                    <!-- Navegação entre Aulas -->
+                    <div class="lesson-navigation">
+                        <button class="btn btn-secondary" id="prevBtn" style="display: none;">
+                            ← Aula Anterior
+                        </button>
+                        <button class="btn btn-primary" id="nextBtn">
+                            Próxima Aula →
+                        </button>
+                    </div>
+
+                    <!-- Botão de Conclusão -->
+                    <div class="lesson-footer">
+                        <button class="btn btn-success" id="completeBtn">
+                            ✓ Marcar como Concluída
+                        </button>
+                        <span id="completionStatus" class="completion-status"></span>
+                    </div>
+                </div>
+
+                <!-- Tela de Quiz -->
+                <div id="quizView" class="quiz-view" style="display: none;">
+                    <div class="quiz-header">
+                        <h1>Avaliação Final</h1>
+                        <p class="quiz-subtitle">Responda as questões para obter seu certificado</p>
+                        <div class="quiz-progress">
+                            <span id="questionCounter">Questão 1 de 10</span>
+                            <div class="quiz-progress-bar">
+                                <div class="quiz-progress-fill" id="quizProgressFill"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-content">
+                        <div class="question-card" id="questionCard">
+                            <!-- Preenchido por JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="quiz-navigation">
+                        <button class="btn btn-secondary" id="prevQuestionBtn" style="display: none;">
+                            ← Questão Anterior
+                        </button>
+                        <button class="btn btn-primary" id="nextQuestionBtn">
+                            Próxima Questão →
+                        </button>
+                    </div>
+
+                    <div class="quiz-footer">
+                        <button class="btn btn-success" id="submitQuizBtn">
+                            Enviar Respostas
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tela de Resultado -->
+                <div id="resultView" class="result-view" style="display: none;">
+                    <div class="result-container">
+                        <div class="result-score" id="resultScore">
+                            <!-- Preenchido por JavaScript -->
+                        </div>
+                        <div class="result-message" id="resultMessage"></div>
+                        <div class="result-details" id="resultDetails"></div>
+
+                        <div id="certificateSection" style="display: none;" class="certificate-section">
+                            <h2>🎉 Parabéns!</h2>
+                            <p>Você atingiu a pontuação mínima de 70% e conquistou seu certificado!</p>
+                            <button class="btn btn-primary" id="downloadCertificateBtn">
+                                📄 Baixar Certificado
+                            </button>
+                        </div>
+
+                        <button class="btn btn-secondary" id="restartBtn">
+                            Recomeçar Quiz
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Canvas para Confetti -->
+    <canvas id="confetti"></canvas>
+
+    <script src="/app.js"></script>
+</body>
+</html>
