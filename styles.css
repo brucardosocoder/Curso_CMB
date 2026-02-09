@@ -1,6 +1,4 @@
-/* ===========================
-   VARIÁVEIS E RESET
-   =========================== */
+/* VARIÁVEIS E RESET */
 
 :root {
     --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
@@ -41,9 +39,7 @@ body {
     min-height: 100vh;
 }
 
-/* ===========================
-   NAVBAR
-   =========================== */
+/* NAVBAR */
 
 .navbar {
     background: var(--background);
@@ -117,9 +113,7 @@ body {
     text-align: right;
 }
 
-/* ===========================
-   LAYOUT PRINCIPAL
-   =========================== */
+/* LAYOUT PRINCIPAL */
 
 .main-container {
     display: flex;
@@ -130,9 +124,7 @@ body {
     min-height: calc(100vh - 80px);
 }
 
-/* ===========================
-   SIDEBAR
-   =========================== */
+/* SIDEBAR */
 
 .sidebar {
     width: 280px;
@@ -246,9 +238,7 @@ body {
     font-size: 1.125rem;
 }
 
-/* ===========================
-   CONTEÚDO PRINCIPAL
-   =========================== */
+/* CONTEÚDO PRINCIPAL */
 
 .content {
     flex: 1;
@@ -258,9 +248,7 @@ body {
     box-shadow: var(--shadow-md);
 }
 
-/* ===========================
-   AULAS
-   =========================== */
+/* AULAS */
 
 .lesson-view {
     animation: fadeIn 0.5s ease;
@@ -422,9 +410,7 @@ body {
     font-weight: 500;
 }
 
-/* ===========================
-   BOTÕES
-   =========================== */
+/* BOTÕES */
 
 .btn {
     padding: 0.75rem 1.5rem;
@@ -483,9 +469,7 @@ body {
     transform: none !important;
 }
 
-/* ===========================
-   QUIZ
-   =========================== */
+/* QUIZ */
 
 .quiz-view {
     animation: fadeIn 0.5s ease;
@@ -611,9 +595,7 @@ body {
     border-top: 2px solid var(--border-color);
 }
 
-/* ===========================
-   RESULTADO
-   =========================== */
+/* RESULTADO */
 
 .result-view {
     animation: fadeIn 0.5s ease;
@@ -714,9 +696,7 @@ body {
     font-size: 1.0625rem;
 }
 
-/* ===========================
-   ANIMAÇÕES
-   =========================== */
+/* ANIMAÇÕES */
 
 @keyframes fadeIn {
     from {
@@ -756,9 +736,7 @@ body {
     }
 }
 
-/* ===========================
-   RESPONSIVO
-   =========================== */
+/* RESPONSIVO */
 
 @media (max-width: 1024px) {
     .main-container {
